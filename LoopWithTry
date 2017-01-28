@@ -1,0 +1,16 @@
+largest = None
+smallest = None
+while True:
+    num = raw_input("Enter a number: ")
+    if num == "done": break
+    try:
+        entry = int(num) #convert from input (string) to integer
+    except:
+        print "Invalid input"
+        continue
+    if largest == None: largest = num #convert from None to string
+    if smallest == None: smallest = num #convert from None to string
+    if entry > smallest: largest = entry #evaluate values to see which is greater
+    if entry < largest: smallest = entry #evaluate values to see which is lessor
+print "Maximum is", largest
+print "Minimum is", smallest
