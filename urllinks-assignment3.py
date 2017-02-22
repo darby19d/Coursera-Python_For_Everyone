@@ -1,8 +1,7 @@
 import urllib
 from BeautifulSoup import *
-
 url = raw_input('Enter - ')
-if len(url) < 1: url = 'http://python-data.dr-chuck.net/known_by_Fikret.html'
+if len(url) < 1: url = 'http://python-data.dr-chuck.net/known_by_Piper.html'
 urlCount = raw_input('Enter count: ')
 urlCount = int(urlCount) + 1
 urlPosition = raw_input('Enter position: ')
@@ -16,7 +15,6 @@ while urlCount > 0:
     for tag in tags:
         url2 = tag.get('href', None)
         if url2 in urlList: continue
-        else:
-            urlList.append(url2)
+        else: urlList.append(url2)
     urlCount = urlCount - 1
     url = urlList[urlPosition]
