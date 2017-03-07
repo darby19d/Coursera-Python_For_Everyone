@@ -9,10 +9,11 @@ print 'Retreived ', len(xmlfile), ' characters'
 
 tree = ET.fromstring(xmlfile)
 
-#countList = list()
+countList = list()
 
 lst = tree.findall('comments/comment')
 print 'comment volume: ', len(lst)
-for item in lst:
-    print 'Name: ', item.find('name').text
-    print 'Count: ', item.find('count'),text
+for counts in lst:
+    count = int(counts[1].text)
+    countList.append(count)
+print sum(countList)
