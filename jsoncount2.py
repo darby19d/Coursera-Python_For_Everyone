@@ -2,7 +2,7 @@ import urllib
 import json
 
 address = raw_input('Enter location: ')
-if len(address) < 1: address = 'http://python-data.dr-chuck.net/comments_42.json'
+if len(address) < 1: address = 'http://python-data.dr-chuck.net/comments_331106.json'
 print 'Retrieving ', address
 jsonFile = urllib.urlopen(address).read()
 print 'Retrieved ',len(jsonFile),' characters'
